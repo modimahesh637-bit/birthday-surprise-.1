@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Saloni ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffb199);
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.container{
+
+text-align:center;
+
+color:white;
+
+padding:30px;
+
+}
+
+h1{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+text-shadow:2px 2px 10px rgba(0,0,0,.3);
+
+}
+
+p{
+
+font-size:20px;
+
+margin-bottom:25px;
+
+}
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+cursor:pointer;
+
+background:white;
+
+color:#ff4081;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+/* Floating Hearts */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:-1;
+}
+
+.hearts span{
+position:absolute;
+display:block;
+font-size:25px;
+animation:float 12s linear infinite;
+opacity:.8;
+}
+
+.hearts span:nth-child(1){left:5%;animation-duration:9s;}
+.hearts span:nth-child(2){left:15%;animation-duration:12s;}
+.hearts span:nth-child(3){left:28%;animation-duration:10s;}
+.hearts span:nth-child(4){left:40%;animation-duration:14s;}
+.hearts span:nth-child(5){left:52%;animation-duration:11s;}
+.hearts span:nth-child(6){left:65%;animation-duration:13s;}
+.hearts span:nth-child(7){left:78%;animation-duration:10s;}
+.hearts span:nth-child(8){left:90%;animation-duration:15s;}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.4);
+opacity:0;
+}
+
+}
+
+.container{
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* Loading Screen */
+
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#111;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+#count{
+
+font-size:90px;
+
+color:#fff;
+
+animation:zoom .8s infinite;
+
+}
+
+@keyframes zoom{
+
+0%{
+
+transform:scale(.7);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(.7);
+
+}
+
+}
+#birthdayPage{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+text-align:center;
+
+background:linear-gradient(135deg,#ff4b8b,#ff8fab,#ffc2d1);
+
+color:white;
+
+padding:20px;
+
+z-index:999;
+
+}
+
+#birthdayPage h1{
+
+font-size:45px;
+margin-bottom:10px;
+
+}
+
+#birthdayPage h2{
+
+font-size:34px;
+margin-bottom:20px;
+
+}
+
+#birthdayPage p{
+
+font-size:20px;
+max-width:600px;
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+#nextBtn{
+
+padding:15px 35px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+color:#ff4081;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+/* Confetti */
+
+.confetti{
+
+position:fixed;
+
+width:10px;
+height:10px;
+
+top:-20px;
+
+animation:fall linear forwards;
+
+z-index:10000;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-10vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(720deg);
+
+}
+
+}
+#letterPage{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(135deg,#ff8fab,#ffc2d1,#ffe5ec);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+padding:25px;
+
+text-align:center;
+
+color:#fff;
+
+z-index:999;
+
+}
+
+#letterPage h1{
+
+font-size:38px;
+
+margin-bottom:25px;
+
+}
+
+#typeText{
+
+font-size:20px;
+
+line-height:1.8;
+
+max-width:700px;
+
+min-height:180px;
+
+}
+
+#letterNext{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+background:white;
+
+color:#ff4081;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+#galleryPage{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+
+padding:20px;
+
+color:white;
+
+z-index:999;
+
+}
+
+.gallery{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+margin:25px 0;
+
+}
+
+.gallery img{
+
+width:150px;
+
+height:200px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:4px solid white;
+
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.08);
+
+}
+
+#galleryNext{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+color:#ff4081;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+#cakePage{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:linear-gradient(135deg,#ffb3c6,#ff8fab,#fb6f92);
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+z-index:999;
+
+}
+
+.cake{
+
+font-size:120px;
+
+margin:20px 0;
+
+animation:bounce 1.5s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+#cakeNext{
+
+padding:15px 35px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+color:#ff4081;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+#giftPage{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+z-index:999;
+
+}
+
+#giftBox{
+
+font-size:120px;
+
+cursor:pointer;
+
+animation:bounce 1.5s infinite;
+
+}
+
+#giftText{
+
+margin-top:25px;
+
+font-size:22px;
+
+line-height:1.8;
+
+max-width:700px;
+
+}
+
+#finalBtn{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+color:#ff4081;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+.firework{
+
+position:fixed;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:explode 1.8s linear forwards;
+
+z-index:99999;
+
+}
+
+@keyframes explode{
+
+0%{
+
+transform:scale(.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(2.5);
+
+opacity:0;
+
+}
+
+}
+#finalPage{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+z-index:9999;
+
+}
+
+#finalPage h1{
+
+font-size:48px;
+
+margin-bottom:15px;
+
+}
+
+#finalPage h2{
+
+font-size:28px;
+
+margin-bottom:25px;
+
+}
+
+#finalPage p{
+
+font-size:22px;
+
+line-height:1.8;
+
+max-width:700px;
+
+}
+
+#finalPage h3{
+
+margin-top:30px;
+
+font-size:30px;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday Saloni ❤️</h1>
+
+<p>Tap the button below to begin your surprise...</p>
+
+<button id="startBtn">
+Start Surprise ✨
+</button>
+
+</div>
+
+
+<div class="hearts">
+<span>❤️</span>
+<span>💖</span>
+<span>💕</span>
+<span>💗</span>
+<span>💝</span>
+<span>❤️</span>
+<span>💞</span>
+<span>💓</span>
+</div>
+<div id="loader">
+
+<h1 id="count">3</h1>
+
+</div>
+<div id="birthdayPage" style="display:none;">
+
+    <h1>🎂 Happy Birthday 🎂</h1>
+
+    <h2>Saloni ❤️</h2>
+
+    <p>
+        Wishing you endless happiness,
+        beautiful memories,
+        lots of smiles,
+        and a wonderful year ahead. 💖
+    </p>
+
+    <button id="nextBtn">
+        Next Surprise ✨
+    </button>
+
+</div>
+<div id="letterPage" style="display:none;">
+
+<h1>💌 A Letter For You</h1>
+
+<p id="typeText"></p>
+
+<button id="letterNext">
+Next ❤️
+</button>
+
+</div>
+<div id="galleryPage" style="display:none;">
+
+<h1>📸 Beautiful Memories ❤️</h1>
+
+<div class="gallery">
+<img src="./gallry/IMG-20260220-WA0079.jpg">
+<img src="gallry/IMG-20260520-WA0010.jpg">
+<img src="gallry/IMG-20260717-WA0001.jpg">
+<img src="gallry/IMG-20260717-WA0002.jpg">
+<img src="gallry/IMG-20260717-WA0003.jpg">
+<img src="gallry/IMG-20260717-WA0007.jpg">
+<img src="gallry/IMG-20260717-WA0008.jpg">
+<img src="gallry/IMG-20260717-WA0009.jpg">
+<img src="gallry/IMG-20260717-WA0010.jpg">
+
+</div>
+
+<button id="galleryNext">
+Next Surprise 🎁
+</button>
+
+</div>
+<div id="cakePage" style="display:none;">
+
+<h1>🎂 Make a Wish, Saloni ❤️</h1>
+
+<div class="cake">🎂</div>
+
+<p>Today is all about you. Smile, make a wish and enjoy your special day! ✨</p>
+
+<button id="cakeNext">
+Open Your Gift 🎁
+</button>
+
+</div>
+<div id="giftPage" style="display:none;">
+
+<h1>🎁 A Special Gift For You ❤️</h1>
+
+<div id="giftBox">🎁</div>
+
+<p id="giftText" style="display:none;">
+No matter where life takes you,
+keep smiling and stay happy.
+You are truly special.
+💖 Happy Birthday Saloni 💖
+</p>
+
+<button id="finalBtn" style="display:none;">
+Final Surprise ✨
+</button>
+
+</div>
+<div id="finalPage" style="display:none;">
+
+<h1>🎉 Happy Birthday Saloni ❤️</h1>
+
+<h2>19 • 08 • 2005 🎂</h2>
+
+<p>
+
+May your life always be filled with
+love ❤️, happiness 😊, success 🌟,
+good health 💖 and beautiful memories.
+
+Never stop smiling...
+because your smile makes the world brighter. ✨
+
+</p>
+
+<h3>Have The Best Birthday Ever! 🎈</h3>
+
+</div>
+<script>
+
+
+const btn=document.getElementById("startBtn");
+const loader=document.getElementById("loader");
+const count=document.getElementById("count");
+
+btn.onclick=function(){
+document.getElementById("bgMusic").play();
+loader.style.display="flex";
+
+let num=3;
+
+count.innerHTML=num;
+
+const timer=setInterval(()=>{
+
+num--;
+
+if(num>0){
+
+count.innerHTML=num;
+
+}else if(num===0){
+
+count.innerHTML="🎉";
+
+}else{
+
+clearInterval(timer);
+
+loader.style.display="none";
+
+loader.style.display="none";
+
+document.getElementById("birthdayPage").style.display="flex";
+createConfetti();
+}
+
+},1000);
+
+};
+document.getElementById("nextBtn").onclick=function(){
+
+document.getElementById("birthdayPage").style.display="none";
+
+document.getElementById("letterPage").style.display="flex";
+
+typeWriter(message,"typeText");
+
+};
+
+function createConfetti(){
+
+const colors=[
+"#ff4d6d",
+"#ffd60a",
+"#38bdf8",
+"#22c55e",
+"#ffffff",
+"#ff99c8"
+];
+
+for(let i=0;i<150;i++){
+
+const c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=
+colors[Math.floor(Math.random()*colors.length)];
+
+c.style.animationDuration=
+(3+Math.random()*3)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},7000);
+
+}
+
+}
+const message = `Dear Saloni ❤️,
+
+Happy Birthday!
+
+Today is your special day (19-08-2005 🎂).
+
+May every dream you have come true.
+May your smile always stay bright.
+May happiness, success and love always be with you.
+
+Enjoy every moment of your life.
+
+Once again...
+
+Happy Birthday Saloni! ❤️🎉`;
+
+function typeWriter(text,id){
+
+let i=0;
+
+const target=document.getElementById(id);
+
+target.innerHTML="";
+
+const typing=setInterval(()=>{
+
+target.innerHTML+=text.charAt(i);
+
+i++;
+
+if(i>=text.length){
+
+clearInterval(typing);
+
+}
+
+},35);
+
+}
+document.getElementById("letterNext").onclick=function(){
+
+document.getElementById("letterPage").style.display="none";
+
+document.getElementById("galleryPage").style.display="flex";
+
+};
+
+document.getElementById("galleryNext").onclick=function(){
+
+document.getElementById("galleryPage").style.display="none";
+
+document.getElementById("cakePage").style.display="flex";
+
+};
+
+document.getElementById("cakeNext").onclick=function(){
+
+document.getElementById("cakePage").style.display="none";
+
+document.getElementById("giftPage").style.display="flex";
+
+};
+
+document.getElementById("giftBox").onclick=function(){
+
+this.innerHTML="💝";
+
+document.getElementById("giftText").style.display="block";
+
+document.getElementById("finalBtn").style.display="inline-block";
+
+};
+
+
+function fireworks(){
+
+const emoji=["🎆","✨","🎇","💖","🎉","🎊"];
+
+for(let i=0;i<60;i++){
+
+setTimeout(()=>{
+
+const f=document.createElement("div");
+
+f.className="firework";
+
+f.innerHTML=emoji[Math.floor(Math.random()*emoji.length)];
+
+f.style.left=Math.random()*100+"vw";
+
+f.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(f);
+
+setTimeout(()=>{
+
+f.remove();
+
+},1800);
+
+},i*80);
+
+}
+
+}
+document.getElementById("finalBtn").onclick=function(){
+
+document.getElementById("giftPage").style.display="none";
+
+document.getElementById("finalPage").style.display="flex";
+
+fireworks();
+
+};
+</script>
+<audio id="bgMusic" loop>
+   <source src="music.mp3" type="audio/mpeg">
+</audio>
+</body>
+
+</html>
